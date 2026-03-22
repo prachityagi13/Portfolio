@@ -1,6 +1,27 @@
 import { motion } from "framer-motion";
 
-const skills = ["React", "Node", "JavaScript", "SQL", "HTML", "CSS"];
+const skillData = [
+    {
+        title: "Languages",
+        items: ["C++", "JavaScript", "SQL"],
+    },
+    {
+        title: "Frontend",
+        items: ["React.js", "HTML", "CSS", "Bootstrap"],
+    },
+    {
+        title: "Backend",
+        items: ["Node.js", "Express.js"],
+    },
+    {
+        title: "Database",
+        items: ["PostgreSQL"],
+    },
+    {
+        title: "Tools",
+        items: ["Git", "GitHub", "VS Code", "Postman", "Jupyter Notebook"],
+    },
+];
 
 const Skills = () => {
     return (
@@ -8,26 +29,38 @@ const Skills = () => {
             <h2>Skills</h2>
 
             <motion.div
-                className="skill-list"
+                className="skills-container"
                 initial="hidden"
                 whileInView="show"
+                viewport={{ once: true }}
                 variants={{
                     show: {
-                        transition: { staggerChildren: 0.1 },
+                        transition: { staggerChildren: 0.2 },
                     },
                 }}
             >
-                {skills.map((skill, i) => (
-                    <motion.span
-                        key={i}
+                {skillData.map((category, index) => (
+                    <motion.div
+                        className="skill-card"
+                        key={index}
                         variants={{
-                            hidden: { opacity: 0, y: 20 },
+                            hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0 },
                         }}
-                        whileHover={{ scale: 1.1 }}
                     >
-                        {skill}
-                    </motion.span>
+                        <h3>{category.title}</h3>
+
+                        <div className="skill-items">
+                            {category.items.map((skill, i) => (
+                                <motion.span
+                                    key={i}
+                                    whileHover={{ scale: 1.1 }}
+                                >
+                                    {skill}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </motion.div>
                 ))}
             </motion.div>
         </section>

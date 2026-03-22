@@ -1,34 +1,48 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
-    return (
-        <section className="projects">
-            <h2>My Work</h2>
+    const navigate = useNavigate();
 
-            <motion.div
-                className="masonry"
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={{
-                    show: { transition: { staggerChildren: 0.15 } },
-                }}
-            >
-                {[1, 2, 3].map((item) => (
+    return (
+        <section className="projects-section">
+
+            {/* LEFT TEXT */}
+            <div className="projects-text">
+                <h2>My Projects</h2>
+                <p>
+                    I create modern and scalable web applications with clean UI,
+                    smooth user experience, and powerful backend systems.
+                    Explore my work below.
+                </p>
+
+                <button onClick={() => navigate("/projects")}>
+                    View All Projects
+                </button>
+            </div>
+
+            {/* RIGHT STACKED CARDS */}
+            <div className="stack-container">
+
+                {[1, 2, 3].map((item, index) => (
                     <motion.div
-                        className="card"
                         key={item}
-                        variants={{
-                            hidden: { opacity: 0, y: 60 },
-                            show: { opacity: 1, y: 0 },
+                        className={`stack-card card-${index}`}
+                        whileHover={{
+                            scale: 1.08,
+                            rotate: 0,
+                            zIndex: 10,
                         }}
-                        whileHover={{ scale: 1.05 }}
+                        onClick={() => navigate("/projects")}
                     >
-                        <img src={`https://picsum.photos/400/50${item}`} alt="" />
-                        <div className="overlay">Project {item}</div>
+                        <img
+                            src={`https://picsum.photos/400/500?random=${item}`}
+                            alt=""
+                        />
                     </motion.div>
                 ))}
-            </motion.div>
+
+            </div>
         </section>
     );
 };

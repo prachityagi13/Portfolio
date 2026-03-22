@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
     return (
         <section className="contact">
-            <motion.h2
+            {/* <motion.h2
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
             >
@@ -18,7 +18,7 @@ const Contact = () => {
                 <input placeholder="Email" />
                 <textarea placeholder="Message" />
                 <button>Send</button>
-            </motion.div>
+            </motion.div> */}
         </section>
     );
 };
