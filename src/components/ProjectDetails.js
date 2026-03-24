@@ -1,24 +1,27 @@
 import { motion } from "framer-motion";
+import taskManager from "../assets/to-do.png";
+import portfolio from "../assets/portfolio.png";
+import weather from "../assets/weather.png";
 
 const projectData = [
+    {
+        title: "Portfolio",
+        desc: "Personal portfolio using React",
+        link: "https://prachityagi13.github.io/Portfolio/",
+        image: portfolio,
+    },
+    {
+        title: "Smart Task Manager",
+        desc: "Task management application",
+        link: "https://prachityagi13.github.io/to-do-list/",
+        image: taskManager,
+    },
     {
         title: "Weather App",
         desc: "Real-time weather app using API",
         link: "https://github.com/yourgithub/weather",
-        image: "https://picsum.photos/400/300?1",
-    },
-    {
-        title: "Portfolio",
-        desc: "Personal portfolio using React",
-        link: "https://github.com/yourgithub/portfolio",
-        image: "https://picsum.photos/400/300?2",
-    },
-    {
-        title: "LMS System",
-        desc: "Learning management system",
-        link: "https://github.com/yourgithub/lms",
-        image: "https://picsum.photos/400/300?3",
-    },
+        image: weather,
+    }
 ];
 
 const ProjectDetails = () => {

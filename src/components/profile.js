@@ -3,7 +3,7 @@ import profile from "../assets/profile.jpeg";
 
 const Hero = () => {
     return (
-        <section className="hero">
+        <section className="hero" id="profile">
 
             {/* LEFT SIDE TEXT */}
             <div className="hero-text">
