@@ -31,9 +31,7 @@ const About = () => {
                         show: { opacity: 1, y: 0 },
                     }}
                 >
-                    Full-stack developer with hands-on experience in React.js and Node.js,
-                    currently pursuing MCA. Skilled in building scalable web applications
-                    and multi-user SaaS platforms with role-based systems.
+                    Full Stack Developer specializing in the MERN stack, with practical experience in building scalable web applications and role-based SaaS platforms. Proficient in developing responsive frontends, secure REST APIs, and managing relational databases using PostgreSQL. Strong focus on performance, clean architecture, and seamless frontend-backend integration.
                 </motion.p>
 
                 <motion.p
