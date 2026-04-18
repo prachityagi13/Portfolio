@@ -19,7 +19,7 @@ const skillData = [
     },
     {
         title: "Tools",
-        items: ["Git", "GitHub", "VS Code", "Postman", "Jupyter Notebook"],
+        items: ["Git", "GitHub", "VS Code", "Postman"],
     },
 ];
 

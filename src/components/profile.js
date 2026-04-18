@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpeg";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
     return (
@@ -22,6 +23,26 @@ const Hero = () => {
                 >
                     Full Stack Developer | React | Node.js
                 </motion.p>
+
+                {/* ICONS ROW (NEW LINE) */}
+                <motion.div
+                    className="social-icons"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                >
+                    <a href="https://www.linkedin.com/in/prachi-tyagi-17813024a/" target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin />
+                    </a>
+
+                    <a href="https://github.com/prachityagi13" target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                    </a>
+
+                    <a href="mailto:prachit764@gmail.com">
+                        <FaEnvelope />
+                    </a>
+                </motion.div>
             </div>
 
             {/* RIGHT SIDE IMAGE */}
