@@ -45,7 +45,7 @@ const About = () => {
                             show: { opacity: 1, y: 0 },
                         }}
                     >
-                        Full Stack Developer specializing in the MERN stack, with practical experience in building scalable web applications and role-based SaaS platforms.
+                        Frontend Developer specializing in React.js and modern web technologies, with practical experience in building scalable web applications and role-based SaaS platforms.
                     </motion.p>
 
                     <motion.p
