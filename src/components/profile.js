@@ -21,7 +21,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
                 >
-                    Full Stack Developer | React | Node.js
+                    Frontend Developer | React | Node.js
                 </motion.p>
 
                 {/* ICONS ROW (NEW LINE) */}
